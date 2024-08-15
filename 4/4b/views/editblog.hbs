@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <style>
+        .add-card {
+            background-color: #333;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .dropdown-menu {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <h1 class="ps-4 text-white"><span class="text-warning">7</span>DW</h1>
+        </a>
+    </nav>
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+        <div class="card add-card" style="width: 25rem;">
+            <div class="card-body text-white">
+                <h5 class="card-title text-center">Edit</h5>
+                <form action="/editblog/{{data.id}}" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="name" class="form-control" id="name" placeholder="Enter your name" name="name"
+                            value="{{data.name_hero}}" required>
+                    </div>
+                    <label for="name" class="form-label">Pilih Type Hero</label>
+
+                    <select id="characterSelect" class="form-select mb-2" name="type">
+                        <option value="1">Fighter</option>
+                        <option value="2">Mage</option>
+                        <option value="3">Assassin</option>
+                        <option value="4">Marksman</option>
+                        <option value="5">Tank</option>
+                    </select>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Pilih Gambar</label>
+                        <input class="form-control" type="file" value="{{data.image}}" id="formFile" name="image"
+                            accept="image/*">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Kirim</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

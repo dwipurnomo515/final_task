@@ -1,0 +1,24 @@
+{
+  "name": "final_task",
+  "version": "1.0.0",
+  "main": "4/4b/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon app.js"
+  },
+  "author": "Dwi Purnomo",
+  "license": "ISC",
+  "description": "Ini project final task saya",
+  "dependencies": {
+    "express": "^4.19.2",
+    "hbs": "^4.2.0",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "pg-promise": "^11.9.1",
+    "sequelize": "^6.37.3",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.18.0",
+    "bcrypt": "^5.1.1"
+  }
+}
